@@ -241,6 +241,7 @@ public class RatingDialog extends AppCompatDialog implements RatingBar.OnRatingB
     private void openPlaystore(Context context) {
         final Uri marketUri = Uri.parse(builder.playstoreUrl);
         try {
+            Toast.makeText(context, "Thank you! Please confirm your rating on Google Play :)", Toast.LENGTH_SHORT).show();
             context.startActivity(new Intent(Intent.ACTION_VIEW, marketUri));
         } catch (android.content.ActivityNotFoundException ex) {
             Toast.makeText(context, "Couldn't find PlayStore on this device", Toast.LENGTH_SHORT).show();
