@@ -7,4 +7,6 @@
     <string name="rating_dialog_submit">Submit</string>
     <string name="rating_dialog_cancel">Cancel</string>
     <string name="rating_dialog_suggestions">Suggest us what went wrong and we\'ll work on it!</string>
+    <string name="rating_dialog_play_store_redirect">Thank you! Please confirm your rating on Google Play :)</string>
+    <string name="rating_dialog_play_store_not_found">Couldn't find PlayStore on this device</string>
 </resources>
