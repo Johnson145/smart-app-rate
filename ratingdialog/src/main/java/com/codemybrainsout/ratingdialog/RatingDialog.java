@@ -282,9 +282,16 @@ public class RatingDialog extends AppCompatDialog implements RatingBar.OnRatingB
     @Override
     public void show() {
 
-        if (checkIfSessionMatches(session)) {
+        if (isEnabled()) {
             super.show();
         }
+    }
+    
+    /**
+     * Whether calling show() does actually show the dialog.
+     */
+    public boolean isEnabled() {
+        return checkIfSessionMatches(session);
     }
 
     private boolean checkIfSessionMatches(int session) {        
