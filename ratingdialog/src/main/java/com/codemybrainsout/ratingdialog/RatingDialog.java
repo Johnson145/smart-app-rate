@@ -140,9 +140,9 @@ public class RatingDialog extends AppCompatDialog implements RatingBar.OnRatingB
         tvSubmit.setOnClickListener(this);
         tvCancel.setOnClickListener(this);
 
-        if (session == 1) {
+        /*if (session == 1) {
             tvNegative.setVisibility(View.GONE);
-        }
+        }*/
     }
 
     @Override
