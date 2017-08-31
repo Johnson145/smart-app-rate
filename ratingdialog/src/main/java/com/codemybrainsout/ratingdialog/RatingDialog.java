@@ -287,16 +287,15 @@ public class RatingDialog extends AppCompatDialog implements RatingBar.OnRatingB
         }
     }
 
-    private boolean checkIfSessionMatches(int session) {
-
-        if (session == 1) {
-            return true;
-        }
+    private boolean checkIfSessionMatches(int session) {        
 
         sharedpreferences = context.getSharedPreferences(MyPrefs, Context.MODE_PRIVATE);
 
         if (sharedpreferences.getBoolean(SHOW_NEVER, false)) {
             return false;
+        }
+        else if (session == 1) {
+            return true;
         }
 
         int count = sharedpreferences.getInt(SESSION_COUNT, 1);
