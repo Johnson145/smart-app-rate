@@ -279,13 +279,16 @@ public class RatingDialog extends AppCompatDialog implements RatingBar.OnRatingB
     public RatingBar getRatingBarView() {
         return ratingBar;
     }
+    
+    public void show(boolean force) {
+        if (force || isEnabled()) {
+            super.show();
+        }
+    }
 
     @Override
     public void show() {
-
-        if (isEnabled()) {
-            super.show();
-        }
+        show(false);
     }
     
     /**
